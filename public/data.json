@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Golden Harvest Farm",
+      "segment_name": "Agricultural Land",
+      "description": "Discover the epitome of agricultural opportunity in Dhaka with Golden Harvest Farm. Spread across 10 acres of fertile land, this property offers a canvas for diverse crops and agricultural ventures. Enhanced by a reliable water source and electricity connection, it provides the essential infrastructure for agricultural success.",
+      "price": 200000,
+      "status": "sale",
+      "area": 435600,
+      "location": "Dhaka",
+      "facilities": ["Water source", "Electricity connection"],
+      "image_url": "https://i.ibb.co/M2F8t7p/IMG-6541-1024x682.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Sunset Ranch Retreat",
+      "segment_name": "Ranches",
+      "description": "Nestled in the picturesque landscapes of Chittagong, Sunset Ranch Retreat presents 20 acres of idyllic ranch living. Perfect for livestock enthusiasts, this property features sprawling pastures, a rustic barn, and a tranquil pond, creating an ideal environment for agricultural pursuits and countryside living.",
+      "price": 300000,
+      "status": "sale",
+      "area": 871200,
+      "location": "Chittagong",
+      "facilities": ["Barn", "Pond"],
+      "image_url": "https://i.ibb.co/zV60TRK/Rustic-Barn-Home-Dubbe-Moulder-Architects-01-1-Kindesign.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Green Acres Farm",
+      "segment_name": "Farms",
+      "description": "Embark on a journey into agricultural abundance with Green Acres Farm in Sylhet. Spanning 15 acres, this family-owned farm cultivates a diverse range of crops and sustains livestock. Equipped with a greenhouse and storage shed, it facilitates efficient farming practices and harvest management.",
+      "price": 250000,
+      "status": "rent",
+      "area": 653400,
+      "location": "Sylhet",
+      "facilities": ["Greenhouse", "Storage shed"],
+      "image_url": "https://example.com/green_acres_farm.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Vineyard Valley Estate",
+      "segment_name": "Vineyards",
+      "description": "Experience the allure of winemaking in Rajshahi at Vineyard Valley Estate. Encompassing 25 acres, this expansive vineyard boasts meticulously tended grapevines and state-of-the-art wine-making facilities, promising a blend of sophistication and rustic charm for wine connoisseurs and agricultural enthusiasts alike.",
+      "price": 400000,
+      "status": "sale",
+      "area": 1089000,
+      "location": "Rajshahi",
+      "facilities": ["Winery", "Tasting room"],
+      "image_url": "https://example.com/vineyard_valley_estate.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Mystic Forest Retreat",
+      "segment_name": "Forests",
+      "description": "Embrace the serenity of nature in Khulna's Mystic Forest Retreat. Enveloped by 30 acres of lush forestland, this property offers an escape into tranquility with winding trails, verdant foliage, and a secluded campsite, providing an ideal sanctuary for nature lovers and outdoor adventurers.",
+      "price": 300000,
+      "status": "rent",
+      "area": 1306800,
+      "location": "Khulna",
+      "facilities": ["Trails", "Campsite"],
+      "image_url": "https://example.com/mystic_forest_retreat.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Palm Paradise Plantation",
+      "segment_name": "Plantations",
+      "description": "Immerse yourself in tropical splendor at Barisal's Palm Paradise Plantation. Set across 15 acres, this lush palm plantation exudes exotic charm, complemented by modern amenities such as an efficient irrigation system and a sophisticated processing facility, promising a harmonious blend of natural beauty and agricultural innovation.",
+      "price": 280000,
+      "status": "sale",
+      "area": 653400,
+      "location": "Barisal",
+      "facilities": ["Irrigation system", "Processing facility"],
+      "image_url": "https://example.com/palm_paradise_plantation.jpg"
+    },
+    {
+      "id": 7,
+      "estate_title": "Tea Haven Estate",
+      "segment_name": "Plantations",
+      "description": "Indulge in the rich heritage of tea cultivation at Rangpur's Tea Haven Estate. Spanning vast acres of sprawling tea plantations, this estate offers a glimpse into the art of tea production, complete with a fully-equipped tea factory and comfortable worker housing, making it an ideal retreat for tea enthusiasts and agricultural aficionados.",
+      "price": 320000,
+      "status": "sale",
+      "area": 522720,
+      "location": "Rangpur",
+      "facilities": ["Tea factory", "Worker housing"],
+      "image_url": "https://example.com/tea_haven_estate.jpg"
+    },
+    {
+      "id": 8,
+      "estate_title": "Coconut Grove Plantation",
+      "segment_name": "Plantations",
+      "description": "Delight in the tropical allure of Mymensingh's Coconut Grove Plantation. Spread over 18 acres, this scenic plantation showcases swaying coconut palms against a backdrop of azure skies, accompanied by essential amenities such as harvesting equipment and a convenient storage facility, promising a seamless blend of natural beauty and agricultural functionality.",
+      "price": 300000,
+      "status": "rent",
+      "area": 784080,
+      "location": "Mymensingh",
+      "facilities": ["Harvesting equipment", "Storage facility"],
+      "image_url": "https://example.com/coconut_grove_plantation.jpg"
+    },
+    {
+      "id": 9,
+      "estate_title": "Rubber Tree Plantation",
+      "segment_name": "Plantations",
+      "description": "Uncover the potential of rubber cultivation at Jessore's Rubber Tree Plantation. Encompassing 25 acres of meticulously arranged rubber trees, this expansive plantation is equipped with a state-of-the-art rubber processing unit and comfortable staff quarters, offering a lucrative opportunity for rubber production in a serene and efficient environment.",
+      "price": 260000,
+      "status": "sale",
+      "area": 1089000,
+      "location": "Jessore",
+      "facilities": ["Rubber processing unit", "Staff quarters"],
+      "image_url": "https://example.com/rubber_tree_plantation.jpg"
+    }
+  ]
+  
