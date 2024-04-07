@@ -3,6 +3,7 @@ import Home from "../Pages/Home/Home";
 import Error from "../Pages/Error/Error";
 import Root from "../Layout/Root/Root";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
         {
           path: '/updateProfile',
           element: <UpdateProfile></UpdateProfile>
+        },
+        {
+          path: '/property/:id',
+          element: <PropertyDetails></PropertyDetails>,
+          loader: () => fetch('/data.json')
         }
       ]
     },
