@@ -33,7 +33,7 @@
       "area": 653400,
       "location": "Sylhet",
       "facilities": ["Greenhouse", "Storage shed"],
-      "image_url": "https://example.com/green_acres_farm.jpg"
+      "image_url": "https://i.ibb.co/HP9W14F/images.jpg"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "area": 1089000,
       "location": "Rajshahi",
       "facilities": ["Winery", "Tasting room"],
-      "image_url": "https://example.com/vineyard_valley_estate.jpg"
+      "image_url": "https://i.ibb.co/519Nb68/67-Napa-Valley-Luxury-Lease-2022-Hillary-Ryan.webp"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": 1306800,
       "location": "Khulna",
       "facilities": ["Trails", "Campsite"],
-      "image_url": "https://example.com/mystic_forest_retreat.jpg"
+      "image_url": "https://i.ibb.co/7RxjhzJ/the-mystic-forest.jpg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": 653400,
       "location": "Barisal",
       "facilities": ["Irrigation system", "Processing facility"],
-      "image_url": "https://example.com/palm_paradise_plantation.jpg"
+      "image_url": "https://i.ibb.co/QdcRRJp/e2a97858.jpg"
     },
     {
       "id": 7,
@@ -81,7 +81,7 @@
       "area": 522720,
       "location": "Rangpur",
       "facilities": ["Tea factory", "Worker housing"],
-      "image_url": "https://example.com/tea_haven_estate.jpg"
+      "image_url": "https://i.ibb.co/9c5d3pD/428510145.jpg"
     },
     {
       "id": 8,
@@ -93,7 +93,7 @@
       "area": 784080,
       "location": "Mymensingh",
       "facilities": ["Harvesting equipment", "Storage facility"],
-      "image_url": "https://example.com/coconut_grove_plantation.jpg"
+      "image_url": "https://i.ibb.co/v4XSgHW/depositphotos-69560853-stock-photo-coconut-palm-trees-grove-blue.jpg"
     },
     {
       "id": 9,
@@ -105,7 +105,7 @@
       "area": 1089000,
       "location": "Jessore",
       "facilities": ["Rubber processing unit", "Staff quarters"],
-      "image_url": "https://example.com/rubber_tree_plantation.jpg"
+      "image_url": "https://i.ibb.co/JnCmn5H/images-1.jpg"
     }
   ]
   
