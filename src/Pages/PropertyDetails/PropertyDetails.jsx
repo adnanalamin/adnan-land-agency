@@ -10,7 +10,7 @@ const PropertyDetails = () => {
     <div className="mt-7">
       <div className="md:grid md:grid-cols-8 md:gap-5 bg-base-100 rounded-2xl shadow-xl">
         <figure className="md:col-span-3 ">
-          <img className="md:rounded-l-2xl h-full mx-auto md:mx-0" src={propert.image_url} alt="Movie" />
+          <img className="md:rounded-l-2xl md:h-full mx-auto md:mx-0" src={propert.image_url} alt="Movie" />
         </figure>
         <div className="md:col-span-5 mx-auto mt-6 py-7 md:mt-0 px-4">
           <h2 className="card-title font-popi font-bold text-3xl">{propert.estate_title}</h2>
