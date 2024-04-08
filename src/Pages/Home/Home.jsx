@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import Banner from "../../Components/Banner/Banner";
 import Card from "../../Components/Card/Card";
 
-
 const Home = () => {
+    
+    useEffect(() => {
+        document.title = 'Adnan Land Agency';
+      }, []);
 
     const [property, setProperty] = useState([])
 

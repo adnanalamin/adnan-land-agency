@@ -1,11 +1,19 @@
 
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
+import { useLocation } from 'react-router-dom';
 
 
 
 const Register = () => {
+
+  const loc= useLocation();
+    
+    console.log(loc)
+    useEffect(() => {
+        document.title = loc.pathname.split('/').join([]);
+      }, [loc]);
 
   const {createUser} = useContext(AuthContext)
  
@@ -54,7 +62,7 @@ const Register = () => {
             <span className="label-text">Photo URL</span>
           </label>
           <input type="text" placeholder="Photo URL" name="photo" className="input input-bordered" 
-          {...register("photo", { required: true, pattern:/[a-zA-Z0-9._%+-]+@gmail\.com/ })} />
+          {...register("photo", { required: true,  })} />
           {errors.photo && <span>sssss</span>}
         </div>
         <div className="form-control">
