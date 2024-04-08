@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const PropertyDetails = () => {
@@ -5,7 +6,12 @@ const PropertyDetails = () => {
   const { id } = useParams();
   const idInt = parseInt(id);
   const propert = properts.find((propert) => propert.id === idInt);
-  console.log(propert);
+  
+
+  useEffect(() => {
+    document.title = propert.estate_title;
+  }, [propert.estate_title]);
+
   return (
     <div className="mt-7">
       <div className="md:grid md:grid-cols-8 md:gap-5 bg-base-100 rounded-2xl shadow-xl">

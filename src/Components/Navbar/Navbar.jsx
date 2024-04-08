@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -61,7 +61,7 @@ const Navbar = () => {
       </ul>
     </div>
     
-          <a className="px-4 py-2 cursor-pointer text-white bg-black">Login</a>
+          <Link to='/login'><a className="px-4 py-2 cursor-pointer text-white bg-black">Login</a></Link>
         </div>
       </div>
     </div>
