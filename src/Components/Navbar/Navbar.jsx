@@ -9,7 +9,6 @@ const Navbar = () => {
   const handelSignout = () => {
     userLogout()
     .then(() => {
-      console.log('first')
     })
   }
 
