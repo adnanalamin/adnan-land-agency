@@ -2,12 +2,18 @@ import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import { AuthContext } from "../../Provider/AuthProvider";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Login = () => {
     const loc= useLocation();
     useEffect(() => {
         document.title = loc.pathname.split('/').join([]);
       }, [loc]);
+
+      useEffect(()=>{
+        AOS.init();
+    },[])
 
 
     const {userSignIn} = useContext(AuthContext)
@@ -26,7 +32,10 @@ const Login = () => {
     }
  return (
         <div className="w-2/4 mx-auto">
-            <form onSubmit={handelForm} className="card-body">
+          <div  className="mt-8">
+            <p data-aos="zoom-out-up" className="font-extrabold font-popi text-4xl text-center ">LogIn</p>
+          </div>
+            <form data-aos="zoom-in-left" onSubmit={handelForm} className="card-body border-2 rounded-xl shadow-xl mt-12">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>

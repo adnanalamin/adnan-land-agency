@@ -1,4 +1,5 @@
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useContext, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -34,12 +35,19 @@ const Register = () => {
     
   }
 
+  useEffect(()=>{
+    AOS.init();
+},[])
 
-  // console.log(watch("example"))
+
+
    
     return (
         <div className="w-2/4 mx-auto">
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
+          <div  className="mt-8">
+            <p data-aos="zoom-out-up" className="font-extrabold font-popi text-4xl text-center ">Register</p>
+          </div>
+            <form data-aos="zoom-in-left" onSubmit={handleSubmit(onSubmit)} className="card-body border-2 rounded-xl shadow-xl mt-12">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Name</span>
@@ -78,7 +86,7 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary">Login</button>
+          <button className="btn btn-primary">Register</button>
         </div>
       </form>
         </div>

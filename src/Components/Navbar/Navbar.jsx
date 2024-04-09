@@ -3,19 +3,22 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
-
-  const {userLogout} = useContext(AuthContext)
+  const { user, userLogout } = useContext(AuthContext);
 
   const handelSignout = () => {
-    userLogout()
-    .then(() => {
-    })
-  }
+    userLogout().then(() => {});
+  };
 
-    const navLink = <>
-        <li><NavLink to='/'>Home</NavLink></li>
-        <li><NavLink to='/updateProfile'>Update Profile</NavLink></li>
+  const navLink = (
+    <>
+      <li>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/updateProfile">Update Profile</NavLink>
+      </li>
     </>
+  );
 
   return (
     <div>
@@ -48,31 +51,48 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl">Adnan Land Agrncy</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {navLink}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{navLink}</ul>
         </div>
         <div className="navbar-end">
-        <div className="dropdown dropdown-end">
-      <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-        <div className="w-10 rounded-full">
-          <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-        </div>
-      </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li>
-          <a className="justify-between">
-            Profile
-            <span className="badge">New</span>
-          </a>
-        </li>
-        <li><a>Settings</a></li>
-        <li><a>Logout</a></li>
-      </ul>
-    </div>
-    
-          <Link to='/login'><button className="px-4 py-2 cursor-pointer text-white bg-black">Login</button></Link>
-          <button onClick={handelSignout} className="px-4 py-2 cursor-pointer text-white bg-black">Login out</button>
+         {
+          user ? <>
+           <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+            >
+              <div className="w-10 rounded-full">
+                <img
+                  alt="Tailwind CSS Navbar component"
+                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                />
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <Link to='/updateProfile'>Profile</Link>
+              </li>
+              <li>
+                <a>{user.email}</a>
+              </li>
+              <li>
+                <a onClick={handelSignout}>Logout</a>
+              </li>
+            </ul>
+          </div>
+          </> :
+          <Link to="/login">
+          <button className="px-4 py-2 cursor-pointer text-white bg-black">
+            Login
+          </button>
+        </Link>
+          
+         }
+          
         </div>
       </div>
     </div>

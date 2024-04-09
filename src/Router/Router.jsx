@@ -6,6 +6,7 @@ import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
     {
@@ -19,11 +20,11 @@ const router = createBrowserRouter([
         },
         {
           path: '/updateProfile',
-          element: <UpdateProfile></UpdateProfile>
+          element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
         },
         {
           path: '/property/:id',
-          element: <PropertyDetails></PropertyDetails>,
+          element: <PrivetRoute><PropertyDetails></PropertyDetails></PrivetRoute>,
           loader: () => fetch('/data.json')
         },
         {
