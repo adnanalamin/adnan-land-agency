@@ -1,4 +1,4 @@
-import {createBrowserRouter} from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home/Home";
 import Error from "../Pages/Error/Error";
 import Root from "../Layout/Root/Root";
@@ -9,34 +9,42 @@ import Register from "../Pages/Register/Register";
 import PrivetRoute from "./PrivetRoute";
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root></Root>,
-      errorElement: <Error></Error>,
-      children:[
-        {
-          path: '/',
-          element: <Home></Home>
-        },
-        {
-          path: '/updateProfile',
-          element: <PrivetRoute><UpdateProfile></UpdateProfile></PrivetRoute>
-        },
-        {
-          path: '/property/:id',
-          element: <PrivetRoute><PropertyDetails></PropertyDetails></PrivetRoute>,
-          loader: () => fetch('/data.json')
-        },
-        {
-          path: '/login',
-          element: <Login></Login>
-        },
-        {
-          path: '/register',
-          element: <Register></Register>
-        }
-      ]
-    },
-  ]);
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <Error></Error>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
+        path: "/updateProfile",
+        element: (
+          <PrivetRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/property/:id",
+        element: (
+          <PrivetRoute>
+            <PropertyDetails></PropertyDetails>
+          </PrivetRoute>
+        ),
+        loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
+      },
+    ],
+  },
+]);
 
-  export default router;
+export default router;

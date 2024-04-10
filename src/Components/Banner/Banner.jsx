@@ -15,7 +15,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div className="h-40 md:h-[400px] mt-12 rounded-lg">
+    <div className="h-40 md:h-[400px] mt-12 rounded-lg z-10">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -38,7 +38,9 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="w-3/5 mx-auto">
-                <h1 className="mb-5 text-5xl w-full font-bold text-white">Adnan Land Agency</h1>
+                <h1 className="mb-5 text-5xl w-full font-bold text-white">
+                  Adnan Land Agency
+                </h1>
                 <p className="mb-5">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
@@ -56,7 +58,9 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="w-3/5 mx-auto">
-                <h1 className="mb-5 text-5xl w-full font-bold text-white">Adnan Land Agency</h1>
+                <h1 className="mb-5 text-5xl w-full font-bold text-white">
+                  Adnan Land Agency
+                </h1>
                 <p className="mb-5">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
@@ -74,7 +78,9 @@ const Banner = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
               <div className="w-3/5 mx-auto">
-                <h1 className="mb-5 text-5xl w-full font-bold text-white">Adnan Land Agency</h1>
+                <h1 className="mb-5 text-5xl w-full font-bold text-white">
+                  Adnan Land Agency
+                </h1>
                 <p className="mb-5">
                   Provident cupiditate voluptatem et in. Quaerat fugiat ut
                   assumenda excepturi exercitationem quasi. In deleniti eaque
@@ -84,7 +90,6 @@ const Banner = () => {
             </div>
           </div>
         </SwiperSlide>
-        
       </Swiper>
     </div>
   );
