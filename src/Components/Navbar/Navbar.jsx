@@ -1,12 +1,27 @@
 import { useContext} from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);
 
   const handelSignout = () => {
-    userLogout().then(() => {});
+    userLogout()
+    .then(() => {
+      Swal.fire({
+        title: "Good job!",
+        text: "Logout Successfully",
+        icon: "success"
+      })
+      .catch(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!"
+        });
+      })
+    });
   };
 
   const navLink = (
@@ -16,6 +31,9 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to="/updateProfile">Update Profile</NavLink>
+      </li>
+      <li>
+        <NavLink to="/userProfile">User Profile</NavLink>
       </li>
     </>
   );
@@ -65,7 +83,7 @@ const Navbar = () => {
                   <div className="w-10 rounded-full">
                     <img
                       alt="Tailwind CSS Navbar component"
-                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                      src={user.photoURL}
                     />
                   </div>
                 </div>
@@ -74,7 +92,7 @@ const Navbar = () => {
                   className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
                 >
                   <li>
-                    <Link to="/updateProfile">Profile</Link>
+                    <Link to="/updateProfile">{user.displayName}</Link>
                   </li>
                   <li>
                     <a>{user.email}</a>

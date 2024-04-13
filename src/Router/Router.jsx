@@ -7,6 +7,7 @@ import PropertyDetails from "../Pages/PropertyDetails/PropertyDetails";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivetRoute from "./PrivetRoute";
+import UserProfile from "../Pages/UserProfile/UserProfile";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path: "/userProfile",
+        element: <PrivetRoute><UserProfile></UserProfile></PrivetRoute>
+      }
     ],
   },
 ]);

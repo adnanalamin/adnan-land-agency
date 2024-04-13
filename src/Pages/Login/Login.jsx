@@ -1,5 +1,5 @@
 import { useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import AOS from "aos";
@@ -10,6 +10,7 @@ import { BsTwitterX } from "react-icons/bs";
 
 const Login = () => {
   const loc = useLocation();
+  const navigate =  useNavigate();
   useEffect(() => {
     document.title = loc.pathname.split("/").join([]);
   }, [loc]);
@@ -25,8 +26,10 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     userSignIn(email, password)
-      .then(() => {
-        console.log("result.user");
+      .then(result => {
+        if(result.user){
+          navigate(location?.state || '/')
+        }
       })
       .catch((error) => {
         console.error(error.message);
@@ -34,8 +37,11 @@ const Login = () => {
   };
 
   const handelGoogleLonIn = () => {
-    googleLogin().then(() => {
-      console.log("sucess");
+    googleLogin()
+    .then(result => {
+      if(result.user){
+        navigate(loc?.state || '/')
+      }
     });
   };
 

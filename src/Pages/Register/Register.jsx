@@ -1,19 +1,22 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useLocation } from "react-router-dom";
+import { IoIosEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
 
 const Register = () => {
   const loc = useLocation();
+  const [showPassword, setShowPassword] = useState(false)
 
   console.log(loc);
   useEffect(() => {
     document.title = loc.pathname.split("/").join([]);
   }, [loc]);
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
 
   const {
     register,
@@ -23,10 +26,14 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data.email);
-    const { email, password } = data;
+    const { email, password, name, photo } = data;
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
+        updateUserProfile(name,photo)
+        .then(() => {
+          console.log('Profile Update')
+        })
       })
       .catch((error) => {
         console.error(error.message);
@@ -94,11 +101,12 @@ const Register = () => {
           {errors.photo && <span>sssss</span>}
         </div>
         <div className="form-control">
+          <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
           <input
-            type="password"
+            type={showPassword ? "text":"password"}
             placeholder="password"
             className="input input-bordered"
             {...register("password", {
@@ -106,7 +114,13 @@ const Register = () => {
               pattern: /(?=.*[A-Z])(?=.*[a-z]).{6,}/,
             })}
           />
+          <span className="absolute bottom-4 right-2" onClick={() => setShowPassword(!showPassword)}>
+            {
+                showPassword ?  <IoIosEyeOff></IoIosEyeOff> : <IoIosEye></IoIosEye>
+            }
+          </span>
           {errors.password && <span>This field is required</span>}
+          </div>
           <label className="label">
             <a href="#" className="label-text-alt link link-hover">
               Forgot password?
