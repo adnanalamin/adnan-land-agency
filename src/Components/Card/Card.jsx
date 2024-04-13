@@ -18,7 +18,7 @@ const Card = ({data}) => {
           <h2 className="card-title font-popi">{estate_title}</h2>
           <h4 className="font-popi text-base text-[#747a76] font-medium">ID : {id}</h4>
           <p className="font-popi text-[#3f3f4d] font-bold">{segment_name}</p>
-            <p className="font-popi text-[#747a76]">{description}</p>
+            <p className="font-popi text-[#747a76]">{description?.length >= 50 ? description?.slice(0, 100) + "..." : description}</p>
             <h4 className="font-popi text-base text-[#3f3f4d] font-medium">Price : {price}</h4>
             <h4 className="font-popi text-base text-[#3f3f4d] font-medium">Status : {status}</h4>
             <p className="font-popi text-[#747a76]">Area : {area} sq ft</p>

@@ -6,6 +6,7 @@ const UserProfile = () => {
     return (
         <div>
             <p>{user.displayName}</p>
+            <img src={user.photoURL} alt="ffff" />
         </div>
     );
 };

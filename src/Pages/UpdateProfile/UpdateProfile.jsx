@@ -12,11 +12,10 @@ const UpdateProfile = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const photo = e.target.photo.value;
-    console.log(photo)
     
     updateUserProfile(name, photo)
-      .then(() => {
-        
+      .then((result) => {
+        console.log(result)
         setName(name);
         setphoto(photo);
         setIsEditing(false);
@@ -27,6 +26,7 @@ const UpdateProfile = () => {
         });
       })
       .catch((error) => {
+        console.log(error.message)
         Swal.fire({
           icon: "error",
           title: "Oops...",

@@ -12,7 +12,7 @@ const Login = () => {
   const loc = useLocation();
   const navigate =  useNavigate();
   useEffect(() => {
-    document.title = loc.pathname.split("/").join([]);
+    document.title = loc.pathname.split("/").join([]); 
   }, [loc]);
 
   useEffect(() => {

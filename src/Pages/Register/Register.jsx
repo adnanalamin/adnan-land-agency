@@ -104,6 +104,7 @@ const Register = () => {
           <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
+             
           </label>
           <input
             type={showPassword ? "text":"password"}
