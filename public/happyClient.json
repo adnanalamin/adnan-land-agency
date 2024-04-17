@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "name": "Emily Johnson",
+        "job_title": "Real Estate Investor",
+        "image": "https://i.ibb.co/nCbqP1V/images-2.jpg",
+        "description": "Helped 500+ clients find dream properties, with 95% satisfaction rate.",
+        "rating": 4.5
+    },
+    {
+        "id": 2,
+        "name": "David Smith",
+        "job_title": "Property Developer",
+        "image": "https://i.ibb.co/5YSC1c5/profile-picture-smiling-millennial-asian-600nw-1836020740.webp",
+        "description": "Clients saved 30% on average compared to market prices on land acquisitions.",
+        "rating": 4.8
+    },
+    {
+        "id": 3,
+        "name": "Jennifer Brown",
+        "job_title": "Business Owner",
+        "image": "https://i.ibb.co/4tYLf29/wp-2021-01-linkedin-profile-picture-after.jpg",
+        "description": "98% satisfied with our professionalism and responsiveness.",
+        "rating": 4.9
+    },
+    {
+        "id": 4,
+        "name": "Michael Wilson",
+        "job_title": "Investment Analyst",
+        "image": "https://i.ibb.co/nCbqP1V/images-2.jpg",
+        "description": "85% saw significant land value increase within first two years.",
+        "rating": 4.7
+    },
+    {
+        "id": 5,
+        "name": "Emma Thompson",
+        "job_title": "Small Business Owner",
+        "image": "https://i.ibb.co/5YSC1c5/profile-picture-smiling-millennial-asian-600nw-1836020740.webphttps://example.com/client5.jpg",
+        "description": "Over 90% praised our transparency in land acquisition process.",
+        "rating": 4.6
+    },
+    {
+        "id": 6,
+        "name": "Daniel Garcia",
+        "job_title": "Entrepreneur",
+        "image": "https://i.ibb.co/4tYLf29/wp-2021-01-linkedin-profile-picture-after.jpg",
+        "description": "Clients spent 50% less time searching for suitable properties.",
+        "rating": 4.8
+    },
+    {
+        "id": 7,
+        "name": "Sophia Martinez",
+        "job_title": "Corporate Executive",
+        "image": "https://i.ibb.co/nCbqP1V/images-2.jpg",
+        "description": "95% commended our expertise in negotiating favorable deals.",
+        "rating": 4.7
+    },
+    {
+        "id": 8,
+        "name": "James Clark",
+        "job_title": "Business Consultant",
+        "image": "https://i.ibb.co/5YSC1c5/profile-picture-smiling-millennial-asian-600nw-1836020740.webp",
+        "description": "90% success rate in matching clients with properties exceeding expectations.",
+        "rating": 4.9
+    },
+    {
+        "id": 9,
+        "name": "Olivia Taylor",
+        "job_title": "Freelance Designer",
+        "image": "https://i.ibb.co/4tYLf29/wp-2021-01-linkedin-profile-picture-after.jpg",
+        "description": "9 out of 10 clients delighted with post-sale support and assistance.",
+        "rating": 4.6
+    },
+    {
+        "id": 10,
+        "name": "William Anderson",
+        "job_title": "Startup Founder",
+        "image": "https://i.ibb.co/nCbqP1V/images-2.jpg",
+        "description": "Consistent 4.8 out of 5-star satisfaction rating in independent reviews.",
+        "rating": 4.8
+    }
+]

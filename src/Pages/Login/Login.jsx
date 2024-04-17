@@ -7,6 +7,7 @@ import "aos/dist/aos.css";
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
+import Swal from 'sweetalert2'
 
 const Login = () => {
   const loc = useLocation();
@@ -32,7 +33,11 @@ const Login = () => {
         }
       })
       .catch((error) => {
-        console.error(error.message);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: `${error.message}`
+        });
       });
   };
 
@@ -107,9 +112,8 @@ const Login = () => {
       </div>
       <div className="mt-3">
         <p className="font-popi text-bold text-center ">
-          Don not you have an account ?{" "}
+          Don not you have an account ?
           <Link className="text-blue-600" to="/register">
-            {" "}
             Register
           </Link>
         </p>

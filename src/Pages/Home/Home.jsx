@@ -3,6 +3,8 @@ import Banner from "../../Components/Banner/Banner";
 import Card from "../../Components/Card/Card";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import HappyClient from "../HappyClient/HappyClient";
+import Feature from "../Feature/Feature";
 
 const Home = () => {
   useEffect(() => {
@@ -45,6 +47,10 @@ const Home = () => {
         {property.map((data) => (
           <Card key={data.id} data={data}></Card>
         ))}
+      </div>
+      <div>
+        <HappyClient></HappyClient>
+        <Feature></Feature>
       </div>
     </div>
   );

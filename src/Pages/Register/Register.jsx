@@ -3,15 +3,15 @@ import "aos/dist/aos.css";
 import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const loc = useLocation();
   const [showPassword, setShowPassword] = useState(false)
-
-  console.log(loc);
+  
   useEffect(() => {
     document.title = loc.pathname.split("/").join([]);
   }, [loc]);
@@ -32,11 +32,19 @@ const Register = () => {
         console.log(result.user);
         updateUserProfile(name,photo)
         .then(() => {
-          console.log('Profile Update')
+          Swal.fire({
+            title: "Good job!",
+            text: "Registration successfully!",
+            icon: "success"
+          });
         })
       })
       .catch((error) => {
-        console.error(error.message);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: {error}
+        });
       });
   };
 
@@ -122,16 +130,20 @@ const Register = () => {
           </span>
           {errors.password && <span>This field is required</span>}
           </div>
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">
-              Forgot password?
-            </a>
-          </label>
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary">Register</button>
         </div>
+        <div className="mt-3">
+        <p className="font-popi text-bold text-center ">
+          Already have account ?
+          <Link className="text-blue-600" to="/login">
+            Login
+          </Link>
+        </p>
+      </div>
       </form>
+      
     </div>
   );
 };

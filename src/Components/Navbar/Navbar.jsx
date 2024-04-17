@@ -1,26 +1,24 @@
-import { useContext} from "react";
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import Swal from 'sweetalert2'
+import Swal from "sweetalert2";
 
 const Navbar = () => {
   const { user, userLogout } = useContext(AuthContext);
 
   const handelSignout = () => {
-    userLogout()
-    .then(() => {
+    userLogout().then(() => {
       Swal.fire({
         title: "Good job!",
         text: "Logout Successfully",
-        icon: "success"
-      })
-      .catch(() => {
+        icon: "success",
+      }).catch(() => {
         Swal.fire({
           icon: "error",
           title: "Oops...",
-          text: "Something went wrong!"
+          text: "Something went wrong!",
         });
-      })
+      });
     });
   };
 
@@ -34,6 +32,9 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink to="/userProfile">User Profile</NavLink>
+      </li>
+      <li>
+        <NavLink to="/contactus">Contact US</NavLink>
       </li>
     </>
   );
@@ -74,33 +75,28 @@ const Navbar = () => {
         <div className="navbar-end">
           {user ? (
             <>
-              <div className="dropdown dropdown-end">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn btn-ghost btn-circle avatar"
-                >
-                  <div className="w-10 rounded-full">
-                    <img
-                      alt="Tailwind CSS Navbar component"
-                      src={user.photoURL}
-                    />
+              <div className="dlex justify-center dropdown fl dropdown-end">
+                <div className="flex items-center gap-4">
+                  <div
+                    className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom"
+                    data-tip={user.displayName}
+                  >
+                    <div className="w-10 rounded-full ">
+                      <img
+                        alt="Tailwind CSS Navbar component"
+                        src={user.photoURL}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <button
+                      onClick={handelSignout}
+                      className="px-4 py-2 cursor-pointer text-white bg-black"
+                    >
+                      LogOut
+                    </button>
                   </div>
                 </div>
-                <ul
-                  tabIndex={0}
-                  className="menu menu-sm dropdown-content mt-3 z-[2] p-2 shadow bg-base-100 rounded-box w-52"
-                >
-                  <li>
-                    <Link to="/updateProfile">{user.displayName}</Link>
-                  </li>
-                  <li>
-                    <a>{user.email}</a>
-                  </li>
-                  <li>
-                    <a onClick={handelSignout}>Logout</a>
-                  </li>
-                </ul>
               </div>
             </>
           ) : (

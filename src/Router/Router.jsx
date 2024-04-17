@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivetRoute from "./PrivetRoute";
 import UserProfile from "../Pages/UserProfile/UserProfile";
+import Contactus from "../Pages/Contactus/Contactus";
 
 const router = createBrowserRouter([
   {
@@ -46,8 +47,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/userProfile",
-        element: <PrivetRoute><UserProfile></UserProfile></PrivetRoute>
-      }
+        element: (
+          <PrivetRoute>
+            <UserProfile></UserProfile>
+          </PrivetRoute>
+        ),
+      },
+      {
+        path: "/contactus",
+        element: (
+          <PrivetRoute>
+            <Contactus></Contactus>
+          </PrivetRoute>
+        ),
+      },
     ],
   },
 ]);
